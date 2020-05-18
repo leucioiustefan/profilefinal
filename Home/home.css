@@ -1,6 +1,7 @@
 body {
   height: 100vh;
 }
+
 .backdrop {
   position: absolute;
   top: 0;
@@ -17,22 +18,30 @@ form {
   left: 50%;
   background: white;
   z-index: 10000;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-radius: 1rem;
   width: 50%;
   height: 57vh;
+  -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
-
   display: none;
 }
 
-.single-input__wrapper {
+form .single-input__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-label {
+form label {
   display: block;
   width: 90%;
   font-size: 1.2rem;
@@ -40,28 +49,32 @@ label {
   padding: 1rem 0;
 }
 
-input {
+form input {
   width: 90%;
   padding: 0.2rem 0;
   margin: 0 auto;
   border: 1px solid gray;
 }
 
-textarea {
+form textarea {
   width: 90%;
   height: 15vh;
   margin: 0 auto;
   border: 1px solid gray;
 }
 
-.form-actions {
+form .form-actions {
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.form-actions button {
+form button {
   border: none;
   margin-top: 1rem;
   padding: 0.5rem 1.5rem;
@@ -73,7 +86,7 @@ textarea {
   border-radius: 1rem;
 }
 
-.form-actions button:nth-of-type(1) {
+form button:nth-of-type(1) {
   margin-right: 1rem;
 }
 
@@ -83,7 +96,8 @@ textarea {
 
 .form-visible {
   display: block;
-  animation: slideFromTop 0.7s ease-out forwards;
+  -webkit-animation: slideFromTop 0.7s ease-out forwards;
+          animation: slideFromTop 0.7s ease-out forwards;
 }
 
 .aditional-info {
@@ -91,21 +105,38 @@ textarea {
   z-index: 200;
   width: 100vw;
   height: 16vh;
-  background: rgb(29, 29, 29);
-  transform: translateY(-116px);
+  background: #1d1d1d;
+  -webkit-transform: translateY(-116px);
+          transform: translateY(-116px);
   display: none;
 }
 
-.aditional-icons {
+.aditional-info .aditional-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: center;
   color: white;
 }
 
 .footer-visible {
   display: block;
+}
+
+@-webkit-keyframes slideFromTop {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes slideFromTop {
@@ -116,3 +147,4 @@ textarea {
     opacity: 1;
   }
 }
+/*# sourceMappingURL=home.css.map */

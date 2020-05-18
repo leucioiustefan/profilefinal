@@ -2,7 +2,7 @@
   padding: 100px 50px 150px;
 }
 
-header {
+.header-section header {
   padding: 20px 50px;
 }
 
@@ -10,23 +10,26 @@ header {
   font-size: 1.2rem;
 }
 
-.header-content h2 {
+.header-section .header-content h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.header-content p,
-.header-content a {
+.header-section .header-content p,
+.header-section .header-content a {
   font-size: 1rem;
 }
 
-.header-content button {
+.header-section .header-content button {
   font-size: 1rem;
   padding: 5px 15px;
 }
 
 .contact-info {
-  flex-direction: row;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
   top: 80%;
 }
 
@@ -38,22 +41,22 @@ form {
   height: 50vh;
 }
 
-label {
+form label {
   font-size: 0.8rem;
   margin: 0 auto;
   padding: 0.5rem 0;
 }
 
-input {
+form input {
   padding: 0;
   font-size: 0.8rem;
 }
 
-textarea {
+form textarea {
   height: 10vh;
 }
 
-.form-actions button {
+form .form-actions button {
   border: none;
   margin-top: 0.5rem;
   padding: 0.2rem 1rem;
@@ -65,12 +68,13 @@ textarea {
   border-radius: 1rem;
 }
 
-.form-actions button:nth-of-type(1) {
+form .form-actions button:nth-of-type(1) {
   margin-right: 0.5rem;
 }
 
 .aditional-info {
-  transform: translateY(-90px);
+  -webkit-transform: translateY(-90px);
+          transform: translateY(-90px);
   height: 14vh;
 }
 
@@ -81,3 +85,4 @@ textarea {
 .icon__wrapper p {
   font-size: 0.6rem;
 }
+/*# sourceMappingURL=small-screens.css.map */
